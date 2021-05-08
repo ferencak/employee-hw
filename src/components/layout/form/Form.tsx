@@ -97,12 +97,11 @@ const Form = forwardRef((props: any, ref: Ref<IRefObject>): JSX.Element => {
             <option value="O">Other</option>
           </select>
         </div>
-        <button className="button" onClick={ title === 'Create' ? createRecord : updateRecord }>{ title }</button>
+      </div>
+      <button className="button" onClick={ title === 'Create' ? createRecord : updateRecord }>{ title }</button>
         { editObjId !== -1 &&
           <button className="button danger" onClick={ () => resetStates() }>Cancel</button>
         }
-      </div>
-
     </div>
   )
 })
