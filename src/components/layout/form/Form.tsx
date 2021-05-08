@@ -97,9 +97,7 @@ const Form = forwardRef((props: any, ref: Ref<IRefObject>): JSX.Element => {
           </select>
         </div>
         <button className="button" onClick={ title === 'Create' ? createRecord : updateRecord }>{ title }</button>
-
       </div>
-
     </div>
   )
 })
