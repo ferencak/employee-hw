@@ -49,6 +49,7 @@ const Form = forwardRef((props: any, ref: Ref<IRefObject>): JSX.Element => {
     setName('')
     setAge(-1)
     setSex('F')
+    setEditObjId(-1)
   }
 
   const updateRecord = (): any => {
@@ -97,7 +98,11 @@ const Form = forwardRef((props: any, ref: Ref<IRefObject>): JSX.Element => {
           </select>
         </div>
         <button className="button" onClick={ title === 'Create' ? createRecord : updateRecord }>{ title }</button>
+        { editObjId !== -1 &&
+          <button className="button danger" onClick={ () => resetStates() }>Cancel</button>
+        }
       </div>
+
     </div>
   )
 })
