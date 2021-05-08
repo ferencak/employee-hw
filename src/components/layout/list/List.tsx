@@ -59,7 +59,6 @@ const List = (): JSX.Element => {
         employeeList.filter((object: any) => {
           return object.sex !== 'M' ? sortedList.push(object) : -1
         })
-        console.log(sortedList)
         break
       case 'FILTER_BY_SEX_O':
         sortedList = [...employeeList].sort((a: any, b: any) => {
