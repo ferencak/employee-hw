@@ -1,0 +1,93 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+thead {
+  background: #6b76fc;
+  border-radius: 110px!important;
+}
+
+tbody {
+  border-bottom: .2em solid #6b76fc
+}
+
+th {
+  color: white;
+  border: 0px;
+}
+
+th.th {
+  cursor: pointer;
+  transition: .25s;
+  text-transform: capitalize;
+}
+
+th.th:hover {
+  background: #00000069;
+  box-shadow: inset 0px 0px 25px -15px black;
+}
+
+td, th {
+  text-align: left;
+  padding: .7em;
+}
+
+tr:nth-child(even) {
+  background-color: #0000001c;
+  border-top: .1em solid #0000001a;
+  border-bottom: .1em solid #00000034;
+}
+
+table tr:first-child th:first-child {
+  border-top-left-radius: .5em;
+}
+
+table tr:first-child th:last-child {
+  border-top-right-radius: .5em;
+}
+
+.list-wrapper .title {
+  width: -webkit-fill-available;
+}
+
+.list-wrapper .title h1 {
+  display: inline-block;
+  font-size: 3vh;
+}
+
+.list-wrapper .title p {
+  line-height: 5vh;
+  display: inline-block;
+  font-size: 1.5vh;
+  color: #bebebe;
+  float: right;
+}
+
+.actions span {
+  cursor: pointer;
+  border-radius: 500px;
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: .25s;
+  padding: .4em;
+}
+.actions span:hover {
+  background: #6b76fc45;
+}
+
+span.label {
+  background: #8c94ff;
+  margin-left: .3rem;
+  width: 1rem;
+  display: inline-block;
+  text-align: center;
+  border-radius: .5vh;
+  font-size: .7em;
+  height: 1.2em;
+  cursor: pointer;
+  transition: .25s;
+}
+span.label:hover {
+  background: #b1b6ff;
+}
