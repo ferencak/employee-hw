@@ -50,6 +50,7 @@ class EmployeeStore extends EventEmitter {
       object.name = data.name
       object.sex = data.sex
       object.age = data.age
+      object.updatedDate = new Date().toISOString()
       return object
     })
     this.emit('change')
