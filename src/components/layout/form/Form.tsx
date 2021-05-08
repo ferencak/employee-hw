@@ -31,6 +31,7 @@ const Form = forwardRef((props: any, ref: Ref<IRefObject>): JSX.Element => {
   const validateData = (): any => {
     if(name === null || age === null || sex === null) return [createMessage('Failed! You have to fill inputs...'), setMessageType('danger')]
     if(name.length < 2 || name.length > 10) return [createMessage('Failed! Input "name" must have 2-10 characters...'), setMessageType('danger')]
+    if(/[^a-zA-Z]/.test(name)) return [createMessage('Failed! Input "name" must contains only characters!'), setMessageType('danger')]
     if(age < 0 || age > 129 || isNaN(age)) return [createMessage('Failed! Input "age" must be between 0-129.'), setMessageType('danger')]
     if(!['F', 'M', 'O'].includes(sex)) return [createMessage('Failed! Invalid "sex" value.'), setMessageType('danger')]
     return -1
